@@ -157,3 +157,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// toast msg
+function myFunction() {
+  var x = document.getElementById("snackbar");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}

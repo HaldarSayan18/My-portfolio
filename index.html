@@ -597,20 +597,21 @@
         </header>
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
-          <form action="#" class="form" data-form>
+          <form action="#" class="form" onsubmit="sendEmail()" data-form>
             <div class="input-wrapper">
               <input type="text" name="fullname" min="5" class="form-input" placeholder="Full name" required
                 data-form-input />
 
-              <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" min="10" max="10" name="mobile" class="form-input"
-                placeholder="Mobile Number" data-form-input />
+              <!-- <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" min="10" max="10" name="mobile" class="form-input"
+                placeholder="Mobile Number" data-form-input autocomplete="off" /> -->
             </div>
-            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input
-              style="margin-bottom: 28px;" />
+            <input type="email" name="email" class="form-input" min="10" placeholder="Email address" required
+              data-form-input style="margin-bottom: 28px;" autocomplete="off" />
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your Message" minlength="10" required
+              data-form-input></textarea>
 
-            <button class="form-btn" type="submit" onclick="myFunction()" data-form-btn>
+            <button class="form-btn" type="submit" data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
@@ -619,10 +620,57 @@
           </form>
         </section>
       </article>
+      <!-- copyright -->
+      <footer>
+        <div class="col-md-12 text-center">
+
+          <p>
+            Copyright ©
+            <script>document.write(new Date().getFullYear());</script> All rights reserved
+          </p>
+        </div>
+
+        <style>
+          .text-center {
+            text-align: center !important;
+          }
+
+          @media (min-width: 768px) {
+            .col-md-12 {
+              -webkit-box-flex: 0;
+              -ms-flex: 0 0 100%;
+              flex: 0 0 100%;
+              max-width: 100%;
+            }
+          }
+
+
+          .ftco-footer p {
+            color: rgba(255, 255, 255, 0.7);
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+          }
+
+          .ftco-footer p {
+            color: rgba(255, 255, 255, 0.7);
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+          }
+        </style>
+      </footer>
+
     </div>
   </main>
 
   <!-- custom js link -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> -->
   <script src="./assets/js/script.js"></script>
 
   <!-- ionicon link -->

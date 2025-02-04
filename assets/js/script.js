@@ -158,9 +158,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
   });
 }
 
-// toast msg
-function myFunction() {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
+// send email msg
+// function sendEmail() {
+//   Email.send({
+//     Host: "smtp.elasticemail.com",
+//     Username: "sayanhaldar05@gmail.com",
+//     Password: "EC8CB698212C9015F2EDCEDC0599FFF65F2D",
+//     To: 'sayanhaldar05@gmail.com',
+//     // From:'sayanhaldar05.03.2003@gmail.com',
+//     From: document.getElementsByName("email").value,
+//     Subject: "Email from"+document.getElementsByName("email"),
+//     Body:
+//       "Name: "+document.getElementsByName("fullname").value+"\n Mobile Number: "+
+//       document.getElementsByName("mobile").value+"\n"+
+//       document.getElementsByName("message").value,
+//   })
+//     .then(
+//       alert("Thank You for you mail. \n I will get back to you asap.")
+//     );
+// }
+
+
+

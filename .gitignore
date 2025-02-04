@@ -1,2 +1,2 @@
 # environment
-.env
+server/node_modules/.env

@@ -2,10 +2,10 @@ document.getElementById("contactForm").addEventListener("submit", async function
     event.preventDefault(); // Prevent default form submission
 
     // Get form data
-    const fullName = document.getElementById("fullname").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const fullName = document.getElementByName("fullname").value.trim();
+    const email = document.getElementByName("email").value.trim();
+    const phone = document.getElementByName("phone").value.trim();
+    const message = document.getElementByName("message").value.trim();
 
     // Validate input
     if (!fullName || !email || !phone || !message) {

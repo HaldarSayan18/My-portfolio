@@ -46,5 +46,5 @@ function showToast(message, color) {
     toast.style.right = "20px";
     toast.style.borderRadius = "5px";
     toast.style.display = "block";
-    setTimeout(() => (toast.style.display = "none"), 3000);
+    setTimeout(() => (toast.style.display = "none"), 1000);
 }
